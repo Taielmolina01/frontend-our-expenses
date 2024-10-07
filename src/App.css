@@ -60,6 +60,10 @@ button:hover {
   align-items: center;
 }
 
+body {
+  flex: 1
+}
+
 .container {
   color: white;
   width: 350px;
@@ -95,7 +99,11 @@ ul {
 }
 
 ul li {
-  padding-left: 20px;
+  display: flex;
+}
+
+ul li a {
+  padding: 0 15px;
 }
 
 footer div h2 {

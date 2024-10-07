@@ -1,4 +1,14 @@
+import MemberItem from "./memberItem";
+
 function FooterHome() {
+    const members = {
+        "Batemarco, Joaquín": "https://github.com/BA73C0",
+        "Molina, Taiel": "https://github.com/Taielmolina01",
+        "Puglisi, Agustín": "https://github.com/agusspuglisi",
+        "Schulc, Mariana": "https://github.com/marian1908",
+        "Taibo, Nazareno": "https://github.com/PMNaza"
+    }
+
     return (
         <footer>
             <div className="about-us">
@@ -9,13 +19,13 @@ function FooterHome() {
                     <p>
                         We are the group number 1 of the course Turri in the subject Management and Development of software projects at FIUBA.
                     </p>
-                    <ul>
+                    <h3>
                         Members
-                        <li>Batemarco, Joaquín</li>
-                        <li>Molina, Taiel</li>
-                        <li>Puglisi, Agustín</li>
-                        <li>Schulc, Mariana</li>
-                        <li>Taibo, Nazareno</li>
+                    </h3>
+                    <ul>
+                        {Object.keys(members).map((memberName) => (
+                            <MemberItem name={memberName} link={members[memberName]} />
+                        ))}
                     </ul>
                 </div>
             </div>
