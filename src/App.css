@@ -20,6 +20,7 @@ nav {
   padding: 20px 20px;
   justify-content: space-between;
   align-items: center;
+  height: 50px;
 }
 
 .enterprise-name {
@@ -53,7 +54,7 @@ button:hover {
 
 .body-container {
   display: flex;
-  height: 100vh;
+  height: 70vh;
   background: linear-gradient(0deg, var(--navbar-background-color) 60%, var(--button-background-color) 100%);
   justify-content: center;
   align-items: center;
@@ -98,4 +99,9 @@ ul li {
 
 footer div h2 {
   font-weight: bolder;
+}
+
+a {
+  text-decoration: none;
+  color: inherit; /* Usa el color del texto padre */
 }

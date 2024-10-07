@@ -11,11 +11,11 @@ function Footer() {
                     </p>
                     <ul>
                         Members
-                        <li>Molina, Taiel</li>
                         <li>Batemarco, Joaquín</li>
-                        <li>Schuc, Mariana</li>
+                        <li>Molina, Taiel</li>
                         <li>Puglisi, Agustín</li>
-                        <li>Nazareno</li>
+                        <li>Schulc, Mariana</li>
+                        <li>Taibo, Nazareno</li>
                     </ul>
                 </div>
             </div>

@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 function Navbar() {
     return (
         <nav>
@@ -5,12 +7,16 @@ function Navbar() {
                 OurExpenses
             </div>
             <div class="on-right">
-                <button class="sign-in">
-                    Iniciar sesión
-                </button>
-                <button class="sign-up">
-                    Registrarse
-                </button>
+                <Link to="/signIn">
+                    <button class="sign-in">
+                        Iniciar sesión
+                    </button>
+                </Link>
+                <Link to="/signUp">
+                    <button class="sign-up">
+                        Registrarse
+                    </button>
+                </Link>
             </div>
         </nav>
     )
