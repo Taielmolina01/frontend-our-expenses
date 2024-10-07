@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  font-family: "Poppins";
+  font-weight: normal;
+}
+
+:root {
+  --navbar-background-color: #000306;
+  --navbar-color: white;
+  --button-background-color: #03624C;
+  --button-hover-background-color: #032221;
+  --footer-background-color: #001913;
+}
+
+nav {
+  background-color: var(--navbar-background-color);
+  color: var(--navbar-color);
+  display: flex;
+  flex-direction: row;
+  padding: 20px 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.enterprise-name {
+  margin-left: 30px;
+  font-weight: 700;
+  font-size: larger;
+}
+
+
+.on-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+button {
+  background-color: var(--button-background-color);
+  border: 0px;
+  font-weight: 600;
+  padding: 10px 15px;
+  border-radius: 20px;
+  margin-right: 20px;
+  color: white;
+}
+
+button:hover {
+  background-color: var(--button-hover-background-color);
+  cursor: pointer;
+}
+
+.body-container {
+  display: flex;
+  height: 100vh;
+  background: linear-gradient(0deg, var(--navbar-background-color) 60%, var(--button-background-color) 100%);
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  color: white;
+  width: 350px;
+}
+
+.text-container p {
+  margin: 10px 0;
+}
+
+footer {
+  border-top: 1px solid var(--button-background-color);
+  padding: 30px 0;
+  background-color: var(--footer-background-color);
+  color: white;
+  display: flex;
+  justify-content: space-around;
+}
+
+.about-us {
+  width: 20%;
+}
+
+footer div {
+  margin: 10px 0;
+}
+
+ul {
+  font-weight: bolder;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+ul li {
+  padding-left: 20px;
+}
+
+footer div h2 {
+  font-weight: bolder;
+}
