@@ -1,5 +1,5 @@
 import Body from "../components/Body";
-import Footer from "../components/Footer";
+import FooterHome from "../components/FooterHome";
 import Navbar from "../components/Navbar";
 
 function Home() {
@@ -7,7 +7,7 @@ function Home() {
         <>
             <Navbar />
             <Body />
-            <Footer />
+            <FooterHome />
         </>
     )
 }
