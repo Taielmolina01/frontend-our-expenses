@@ -14,8 +14,8 @@ function Body() {
                    <p>
                         We are going to introduce the app to you in a desktop version but we are already working on a mobile app for Android and iOS
                    </p>
-                   <image src={logo} alt="Logo de OurExpenses"/>
                 </div>
+                <img src={logo} alt="Logo de OurExpenses"/>
             </div>
         </div>
     )

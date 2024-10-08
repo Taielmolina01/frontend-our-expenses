@@ -1,7 +1,12 @@
 import Footer from "../components/Footer";
 import NavbarLog from "../components/NavbarLog";
+import React, { useState } from 'react';
+
+const BACK_URL = "";
 
 function SignIn() {
+
+    const [error, setError] = useState('');
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -10,7 +15,7 @@ function SignIn() {
 
         const json = {};
 
-        json["mail"] = formData.mail;
+        json["mail"] = formData.get('mail');
     
         let res;
 
@@ -28,7 +33,7 @@ function SignIn() {
             if (!res.ok) {
                 setError("No hay un usuario con ese mail registrado")
             } else {
-                if (data.password === formData.password) {
+                if (data.password === formData.get('password')) {
                     router.push("/users/" + data.mail);
                 } else {
                     setError("La contraseña es incorrecta")
@@ -49,15 +54,14 @@ function SignIn() {
                     <label>Mail</label>
                     <input 
                         type="email"
-                        value={formData.mail}
                         required
                     />
                     <label>Password</label>
                     <input 
                         type="password"
-                        value={formData.password}
                         required
                     />
+                    {error && <p style={{ color: 'red' }}>{error}</p>}
                     <input type="submit" value="Sign in"/>
                 </form>
             </div>

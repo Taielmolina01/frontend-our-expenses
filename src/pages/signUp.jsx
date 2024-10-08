@@ -1,24 +1,30 @@
 import Footer from "../components/Footer";
 import NavbarLog from "../components/NavbarLog";
+import React, { useState } from 'react';
 
 const BACK_URL = "";
 
 function SignUp() {
+    
+    const [error, setError] = useState('');
+
     const handleSubmit = async (e) => {
         e.preventDefault();
 
         const formData = new FormData(e.currentTarget);
 
-        if (formData.password !== formData.confirmPassword) {
+        const password = formData.get('password')
+
+        if (password !== formData.get('confirmPassword')) {
             setError('Las contraseñas no coinciden');
             return;
         }
         
         const json = {};
 
-        json["mail"] = formData.mail;
-        json["name"] = formData.name;
-        json["password"] = formData.password;
+        json["mail"] = formData.get('mail');
+        json["name"] = formData.get('name');
+        json["password"] = password;
     
         let res;
 
@@ -53,24 +59,24 @@ function SignUp() {
                     <label>Enter your name</label>
                     <input 
                         type="string"
-                        value="formData.name"
+                        value="name"
                         required
                     />
                     <label>Enter your mail</label>
                     <input 
                         type="email"
-                        value="formData.mail"
+                        value="mail"
                         required
                     />
                     <label>Create a password</label>
                     <input 
                         type="password"
-                        value="formData.password"
+                        value="password"
                         required
                     />
                     <label>Repeat the password</label>
                     <input 
-                        type="formData.confirmPassword"
+                        type="confirmPassword"
                         required
                     />
                     {error && <p style={{ color: 'red' }}>{error}</p>}
