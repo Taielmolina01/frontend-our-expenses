@@ -102,8 +102,12 @@ ul li {
   display: flex;
 }
 
-ul li a {
+ul li p {
   padding: 0 15px;
+}
+
+h3 {
+  font-size: large;
 }
 
 footer div h2 {
@@ -137,4 +141,15 @@ form {
 form input {
   border: none;
   border-radius: 3px;
+}
+
+input[type="submit"] {
+  margin-top: 10px;
+  padding: 5px 0;
+  background-color: var(--button-background-color);
+  color: white;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--button-hover-background-color);
 }
