@@ -52,6 +52,15 @@ button:hover {
   cursor: pointer;
 }
 
+.sign-up {
+  background-color: var(--navbar-background-color);
+  border: 2px solid var(--button-background-color)
+}
+
+.sign-up:hover {
+  background-color: var(--button-background-color);
+}
+
 .body-container {
   display: flex;
   height: 85vh;
@@ -102,6 +111,18 @@ ul li {
   display: flex;
 }
 
+.about-us div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.help div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
 ul li p {
   padding: 0 15px;
 }
@@ -141,6 +162,7 @@ form {
 form input {
   border: none;
   border-radius: 3px;
+  padding: 4px;
 }
 
 input[type="submit"] {

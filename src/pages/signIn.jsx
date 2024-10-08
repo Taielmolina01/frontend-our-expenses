@@ -7,12 +7,12 @@ function SignIn() {
             <NavbarLog />
             <div class="form-container">
                 <form>
-                    <h2>Ingrese en su cuenta</h2>
-                    <label>Email</label>
+                    <h2>Sign in your account</h2>
+                    <label>Mail</label>
                     <input type="email"/>
-                    <label>Contraseña</label>
+                    <label>Password</label>
                     <input type="password"/>
-                    <input type="submit"/>
+                    <input type="submit" value="Sign in"/>
                 </form>
             </div>
             <Footer />

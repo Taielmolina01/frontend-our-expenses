@@ -9,12 +9,12 @@ function Navbar() {
             <div class="on-right">
                 <Link to="/signIn">
                     <button class="sign-in">
-                        Iniciar sesión
+                        Sign in
                     </button>
                 </Link>
                 <Link to="/signUp">
                     <button class="sign-up">
-                        Registrarse
+                        Sign up
                     </button>
                 </Link>
             </div>
