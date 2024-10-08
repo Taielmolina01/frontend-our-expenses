@@ -54,11 +54,13 @@ function SignIn() {
                     <label>Mail</label>
                     <input 
                         type="email"
+                        name="mail"
                         required
                     />
                     <label>Password</label>
                     <input 
                         type="password"
+                        name="password"
                         required
                     />
                     {error && <p style={{ color: 'red' }}>{error}</p>}

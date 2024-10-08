@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 const BACK_URL = "";
 
 function SignUp() {
-    
+
     const [error, setError] = useState('');
 
     const handleSubmit = async (e) => {
@@ -59,24 +59,25 @@ function SignUp() {
                     <label>Enter your name</label>
                     <input 
                         type="string"
-                        value="name"
+                        name="name"
                         required
                     />
                     <label>Enter your mail</label>
                     <input 
                         type="email"
-                        value="mail"
+                        name="mail"
                         required
                     />
                     <label>Create a password</label>
                     <input 
                         type="password"
-                        value="password"
+                        name="password"
                         required
                     />
                     <label>Repeat the password</label>
                     <input 
                         type="confirmPassword"
+                        name="confirmPassword"
                         required
                     />
                     {error && <p style={{ color: 'red' }}>{error}</p>}
