@@ -1,6 +1,8 @@
 import Footer from "../components/Footer";
 import NavbarLog from "../components/NavbarLog";
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+
 
 const BACK_URL = "";
 
@@ -65,6 +67,12 @@ function SignIn() {
                     />
                     {error && <p style={{ color: 'red' }}>{error}</p>}
                     <input type="submit" value="Sign in"/>
+                    <p>
+                        Still not a user?{" "}
+                        <Link href="/signUp">
+                            <a style={{ color: 'green', textDecoration: 'underline' }}>Sign up</a>
+                        </Link>
+                    </p>
                 </form>
             </div>
             <Footer />

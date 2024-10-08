@@ -84,7 +84,7 @@ body {
 .container img {
   width: 300px;
   border: 1px solid var(--button-background-color);
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .text-container p {
@@ -158,14 +158,19 @@ a {
 }
 
 form {
-  padding: 40px;
+  padding: 20px 40px;
   border-radius: 10px;
   border: 1px solid var(--button-background-color);
   background-color: var(--footer-background-color);
   color: white;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 7px;
+}
+
+form p {
+  margin-top: 6px;
+  align-self: center;
 }
 
 form input {

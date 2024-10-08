@@ -1,6 +1,8 @@
 import Footer from "../components/Footer";
 import NavbarLog from "../components/NavbarLog";
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+
 
 const BACK_URL = "";
 
@@ -74,7 +76,7 @@ function SignUp() {
                         name="password"
                         required
                     />
-                    <label>Repeat the password</label>
+                    <label>Confirm your password</label>
                     <input 
                         type="confirmPassword"
                         name="confirmPassword"
@@ -82,6 +84,12 @@ function SignUp() {
                     />
                     {error && <p style={{ color: 'red' }}>{error}</p>}
                     <input type="submit" value="Sign up"/>
+                    <p>
+                        Already user?{" "}
+                        <Link href="/signIn">
+                            <a style={{ color: 'green', textDecoration: 'underline' }}>Sign in</a>
+                        </Link>
+                    </p>
                 </form>
             </div>
             <Footer></Footer>
