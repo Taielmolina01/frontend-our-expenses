@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import NavBarTo from './navBarTo';
 
-function Navbar() {
+function NavbarLandingPage() {
     return (
         <nav>
             <NavBarTo link={"/"} />
@@ -21,4 +21,4 @@ function Navbar() {
     )
 }   
 
-export default Navbar;
+export default NavbarLandingPage;

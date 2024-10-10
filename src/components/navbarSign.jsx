@@ -1,7 +1,6 @@
-import { Link } from 'react-router-dom';
 import NavBarTo from './navBarTo';
 
-function NavbarLog() {
+function NavbarSign() {
     return (
         <nav>
             <NavBarTo link={"/"} />
@@ -9,4 +8,4 @@ function NavbarLog() {
     )
 }   
 
-export default NavbarLog;
+export default NavbarSign;

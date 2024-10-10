@@ -1,6 +1,6 @@
 function Footer() {
     return (
-        <footer>
+        <footer class="footer-not-landing">
             <h2>
                OurExpenses
             </h2>

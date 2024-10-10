@@ -1,6 +1,6 @@
 import logo from '../assets/logo.png'
 
-function Body() {
+function BodyLandingPage() {
     return (
         <section class="body-container">
             <div class="container">
@@ -21,4 +21,4 @@ function Body() {
     )
 }
 
-export default Body;
+export default BodyLandingPage;

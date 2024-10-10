@@ -1,13 +1,13 @@
-import Body from "../components/bodyLandingPage";
-import FooterHome from "../components/footerLandingPage";
-import Navbar from "../components/navbar";
+import BodyLandingPage from "../components/bodyLandingPage";
+import FooterLandingPage from "../components/footerLandingPage";
+import NavbarLandingPage from "../components/navbarLandingPage";
 
 function LandingPage() {
     return ( 
         <div class="landing-container">
-            <Navbar />
-            <Body />
-            <FooterHome />
+            <NavbarLandingPage />
+            <BodyLandingPage />
+            <FooterLandingPage />
         </div>
     )
 }

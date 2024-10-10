@@ -1,6 +1,6 @@
 import MemberItem from "./memberItem";
 
-function FooterHome() {
+function FooterLandingPage() {
     const members = {
         "Batemarco, Joaquín": "https://github.com/BA73C0",
         "Molina, Taiel": "https://github.com/Taielmolina01",
@@ -8,6 +8,9 @@ function FooterHome() {
         "Schulc, Mariana": "https://github.com/marian1908",
         "Taibo, Nazareno": "https://github.com/PMNaza"
     }
+    
+    const linkRepoFront = "https://github.com/Taielmolina01/frontend-our-expenses";
+    const linkDocumentation = "https://drive.google.com/drive/folders/1uFdO6GChyodO61MmLpd-53IefFHcBNiT?usp=sharing";
 
     return (
         <footer>
@@ -34,12 +37,12 @@ function FooterHome() {
                     Help
                 </h2>
                 <div>
-                    <p>
+                    <a href={linkRepoFront} target="_blank">
                         Code
-                    </p>
-                    <p>
+                    </a>
+                    <a href={linkDocumentation} target="_blank">
                         Documentation
-                    </p>
+                    </a>
                 </div>
             </div>
             <div className="company">
@@ -49,4 +52,4 @@ function FooterHome() {
     ) 
 }
 
-export default FooterHome;
+export default FooterLandingPage;

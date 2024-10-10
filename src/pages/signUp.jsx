@@ -1,7 +1,7 @@
 import Footer from "../components/footer";
-import NavbarLog from "../components/navbarLog";
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import NavbarSign from "../components/navbarSign";
 
 
 const BACK_URL = "";
@@ -54,7 +54,7 @@ function SignUp() {
 
     return (
         <>
-            <NavbarLog />
+            <NavbarSign />
             <div class="form-container">
                 <form onSubmit={handleSubmit}>
                     <h2>Sign up</h2>
