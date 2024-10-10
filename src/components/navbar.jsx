@@ -1,11 +1,10 @@
 import { Link } from 'react-router-dom';
+import NavBarTo from './navBarTo';
 
 function Navbar() {
     return (
         <nav>
-            <div class="enterprise-name">
-                OurExpenses
-            </div>
+            <NavBarTo link={"/"} />
             <div class="on-right">
                 <Link to="/signIn">
                     <button class="sign-in">

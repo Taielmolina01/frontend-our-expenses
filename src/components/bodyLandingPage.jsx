@@ -2,7 +2,7 @@ import logo from '../assets/logo.png'
 
 function Body() {
     return (
-        <div class="body-container">
+        <section class="body-container">
             <div class="container">
                 <div className="text-container">
                    <h2>
@@ -17,7 +17,7 @@ function Body() {
                 </div>
                 <img src={logo} alt="Logo de OurExpenses"/>
             </div>
-        </div>
+        </section>
     )
 }
 

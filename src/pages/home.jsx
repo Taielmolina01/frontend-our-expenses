@@ -1,14 +1,14 @@
-import Body from "../components/Body";
-import FooterHome from "../components/FooterHome";
-import Navbar from "../components/Navbar";
+import NavbarHome from "../components/navbarHome";
+import BodyHome from "../components/bodyHome"
+import Footer from "../components/footer";
 
 function Home() {
-    return ( 
-        <>
-            <Navbar />
-            <Body />
-            <FooterHome />
-        </>
+    return (
+        <div class ="home-container">
+            <NavbarHome />
+            <BodyHome />
+            <Footer />
+        </div>
     )
 }
 

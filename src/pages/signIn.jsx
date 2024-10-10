@@ -1,5 +1,5 @@
-import Footer from "../components/Footer";
-import NavbarLog from "../components/NavbarLog";
+import Footer from "../components/footer";
+import NavbarLog from "../components/navbarLog";
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
