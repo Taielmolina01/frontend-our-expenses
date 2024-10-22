@@ -17,7 +17,7 @@ function SignIn() {
 
         const json = {};
 
-        json["mail"] = formData.get('mail');
+        json["email"] = formData.get('email');
     
         let res;
 
@@ -33,10 +33,10 @@ function SignIn() {
             const data = await res.json();
       
             if (!res.ok) {
-                setError("No hay un usuario con ese mail registrado")
+                setError("No hay un usuario con ese email registrado")
             } else {
                 if (data.password === formData.get('password')) {
-                    router.push("/users/" + data.mail);
+                    router.push("/users/" + data.email);
                 } else {
                     setError("La contraseña es incorrecta")
                 }
@@ -53,10 +53,10 @@ function SignIn() {
             <div class="form-container">
                 <form onSubmit={handleSubmit}>
                     <h2>Sign in to OurExpenses</h2>
-                    <label>Mail</label>
+                    <label>Email</label>
                     <input 
                         type="email"
-                        name="mail"
+                        name="email"
                         required
                     />
                     <label>Password</label>

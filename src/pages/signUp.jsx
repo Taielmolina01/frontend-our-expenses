@@ -24,7 +24,7 @@ function SignUp() {
         
         const json = {};
 
-        json["mail"] = formData.get('mail');
+        json["email"] = formData.get('email');
         json["name"] = formData.get('name');
         json["password"] = password;
     
@@ -44,7 +44,7 @@ function SignUp() {
             if (!res.ok) {
                 setError("Atrapé algun error")
             } else {
-                router.push("/users/" + data.mail);
+                router.push("/users/" + data.email);
             }
           } catch (e) {
             setError("Error de conexión");
@@ -64,10 +64,10 @@ function SignUp() {
                         name="name"
                         required
                     />
-                    <label>Enter your mail</label>
+                    <label>Enter your email</label>
                     <input 
-                        type="email"
-                        name="mail"
+                        type="eemail"
+                        name="email"
                         required
                     />
                     <label>Create a password</label>
@@ -85,7 +85,7 @@ function SignUp() {
                     {error && <p style={{ color: 'red' }}>{error}</p>}
                     <input type="submit" value="Sign up"/>
                     <p>
-                        Already user?{" "}
+                        Already a user?{" "}
                         <Link href="/signIn">
                             <a style={{ color: 'green', textDecoration: 'underline' }}>Sign in</a>
                         </Link>
