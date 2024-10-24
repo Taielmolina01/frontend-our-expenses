@@ -1,13 +1,16 @@
 import Footer from "../components/footer";
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import NavbarSign from "../components/navbarSign";
 import BACK_URL from "../utils"
+import { useUser } from '../userContext.jsx';
 
 function SignUp() {
 
+    const { setUser } = useUser();
     const [error, setError] = useState('');
     const [isLoading, setIsLoading] = useState(false);
+    const navigate = useNavigate()
 
 
     const handleSubmit = async (e) => {
@@ -43,16 +46,19 @@ function SignUp() {
             const data = await res.json();
       
             if (!res.ok) {
+                // usar res.status para levantar bien los errores
                 setError("Atrapé algun error")
             } else {
-                router.push("/users/" + data.email);
+                setUser(data);
+                navigate("/home"); 
             }
-          } catch (e) {
+        } catch (e) {
+            console.log(e)
             setError("Error de conexión");
             return;
-          } finally {
+        } finally {
             setIsLoading(false)
-          }
+        }
     }   
 
     return (

@@ -1,12 +1,14 @@
-import { Link } from 'react-router-dom';
 import NavBarTo from './navBarTo';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
 
-function NavbarHome() {
+function NavbarHome({ currentUser }) {
     return (
-        <nav>
+        <nav className="navbar-home">
             <NavBarTo link={"/home"} />
             <div className="on-right">
-                User name placeholder
+                <FontAwesomeIcon icon={faUser}/>
+                {currentUser.name}
             </div>
         </nav>
     )

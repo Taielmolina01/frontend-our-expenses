@@ -1,14 +1,16 @@
 import Footer from "../components/footer";
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import NavbarSign from "../components/navbarSign";
 import BACK_URL from "../utils"
-
+import { useUser } from '../userContext.jsx';
 
 function SignIn() {
 
+    const { setUser } = useUser();
     const [error, setError] = useState('');
     const [isLoading, setIsLoading] = useState(false);
+    const navigate = useNavigate()
 
 
     const handleSubmit = async (e) => {
@@ -34,20 +36,18 @@ function SignIn() {
             const data = await res.json();
       
             if (!res.ok) {
+                // usar res.status para levantar bien los errores
                 setError("No hay un usuario con ese email registrado")
             } else {
-                if (data.password === formData.get('password')) {
-                    router.push("/users/" + data.email);
-                } else {
-                    setError("La contraseña es incorrecta")
-                }
+                setUser(data);
+                navigate("/home"); 
             }
-          } catch (e) {
+        } catch (e) {
             setError("Error de conexión");
             return;
-          } finally {
+        } finally {
             setIsLoading(false)
-          }
+        }
     }
 
     return (
@@ -55,7 +55,7 @@ function SignIn() {
             <NavbarSign />
             <div className="form-container">
                 <form onSubmit={handleSubmit}>
-                    <h2>Sign in to OurExpenses</h2>
+                    <h2>Sign in</h2>
                     <label>Email</label>
                     <input 
                         type="email"

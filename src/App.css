@@ -40,7 +40,9 @@ nav {
 .on-right {
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
+  gap: 15px;
 }
 
 
@@ -179,6 +181,11 @@ footer div h2 {
   font-weight: bolder;
 }
 
+section h3 {
+  color: white;
+  margin-left: 30px;
+}
+
 a {
   text-decoration: none;
   color: inherit; /* Usa el color del texto padre */
@@ -234,4 +241,28 @@ form input {
   margin-top: 10px;
   padding: 5px 0;
   cursor: not-allowed;
+}
+
+.navbar-home {
+  border-bottom: 1px solid var(--button-background-color);
+}
+
+.groups {
+  display: flex;
+  justify-content: space-between;
+}
+
+.create-group {
+  background-color: var(--button-background-color);
+  border: 0px;
+  font-weight: 600;
+  padding: 10px 15px;
+  border-radius: 20px;
+  margin-right: 20px;
+  color: white;
+}
+
+.create-group:hover {
+  background-color: var(--button-hover-background-color);
+  cursor: pointer;
 }

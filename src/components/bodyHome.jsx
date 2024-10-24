@@ -1,7 +1,19 @@
-function BodyHome() {
+import GroupsTable from './groupsTable'
+import CreateGroupButton from './createGroupButton'
+
+function BodyHome({ currentUser }) {
     return (
         <section className="body-home">
-            definir que va aca xd
+            <div className="groups">
+                <h3>
+                    Groups
+                </h3>
+                <CreateGroupButton className="create-group-button"/>
+            </div>
+
+            <div>
+                <GroupsTable currentUser={currentUser}/>
+            </div>
         </section>
     )
 }
