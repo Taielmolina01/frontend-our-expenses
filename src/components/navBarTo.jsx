@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 function NavBarTo( { link } ) {
     return (
-        <div class="enterprise-name">
+        <div className="enterprise-name">
                 <Link to={link}>
                     <span>
                         OurExpenses

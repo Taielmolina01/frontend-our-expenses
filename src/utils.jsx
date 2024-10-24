@@ -1,1 +1,3 @@
-const BACK_URL = "https://vercel.com/taielmolina01s-projects/backend-our-expenses/DcufxpEC2mmBYDbdw8WsFwD8AHjo"
+export const BACK_URL = "https://backend-our-expenses.vercel.app";
+
+export default BACK_URL;

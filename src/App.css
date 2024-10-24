@@ -44,7 +44,7 @@ nav {
 }
 
 
-button {
+.sign-in, .sign-up {
   background-color: var(--button-background-color);
   border: 0px;
   font-weight: 600;
@@ -54,7 +54,7 @@ button {
   color: white;
 }
 
-button:hover {
+.sign-in:hover, .sign.up:hover {
   background-color: var(--button-hover-background-color);
   cursor: pointer;
 }
@@ -98,6 +98,7 @@ button:hover {
 .body-home {
   flex-grow: 1; 
   padding: 20px;
+  background-color: var(--navbar-background-color);
 }
 
 .container {
@@ -213,13 +214,24 @@ form input {
   padding: 4px;
 }
 
-input[type="submit"] {
+.btn {
   margin-top: 10px;
   padding: 5px 0;
   background-color: var(--button-background-color);
   color: white;
+  border: none;
 }
 
-input[type="submit"]:hover {
+.btn:hover {
   background-color: var(--button-hover-background-color);
+  border: none;
+}
+
+.btn-disabled {
+  background-color: #cccccc; /* Gris */
+  color: #666666; /* Texto gris */
+  border: none;
+  margin-top: 10px;
+  padding: 5px 0;
+  cursor: not-allowed;
 }

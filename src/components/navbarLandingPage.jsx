@@ -5,14 +5,14 @@ function NavbarLandingPage() {
     return (
         <nav>
             <NavBarTo link={"/"} />
-            <div class="on-right">
+            <div className="on-right">
                 <Link to="/signIn">
-                    <button class="sign-in">
+                    <button className="sign-in">
                         Sign in
                     </button>
                 </Link>
                 <Link to="/signUp">
-                    <button class="sign-up">
+                    <button className="sign-up">
                         Sign up
                     </button>
                 </Link>

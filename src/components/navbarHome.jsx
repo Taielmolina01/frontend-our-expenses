@@ -5,7 +5,7 @@ function NavbarHome() {
     return (
         <nav>
             <NavBarTo link={"/home"} />
-            <div class="on-right">
+            <div className="on-right">
                 User name placeholder
             </div>
         </nav>

@@ -2,13 +2,14 @@ import Footer from "../components/footer";
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import NavbarSign from "../components/navbarSign";
+import BACK_URL from "../utils"
 
-
-const BACK_URL = "";
 
 function SignIn() {
 
     const [error, setError] = useState('');
+    const [isLoading, setIsLoading] = useState(false);
+
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -22,12 +23,12 @@ function SignIn() {
         let res;
 
         try {
+            setIsLoading(true);
             res = await fetch(`${BACK_URL}/users`, {
               method: "GET",
               headers: {
                 "Content-Type": "application/json",
               },
-              body: JSON.stringify(json),
             });
 
             const data = await res.json();
@@ -44,13 +45,15 @@ function SignIn() {
           } catch (e) {
             setError("Error de conexión");
             return;
+          } finally {
+            setIsLoading(false)
           }
     }
 
     return (
         <>
             <NavbarSign />
-            <div class="form-container">
+            <div className="form-container">
                 <form onSubmit={handleSubmit}>
                     <h2>Sign in to OurExpenses</h2>
                     <label>Email</label>
@@ -66,7 +69,9 @@ function SignIn() {
                         required
                     />
                     {error && <p style={{ color: 'red' }}>{error}</p>}
-                    <input type="submit" value="Sign in"/>
+                    <button  className={isLoading ? 'btn-disabled' : 'btn'}  type="submit" disabled={isLoading}>
+                        {isLoading ? "Loading ..." : "Sign in"}
+                    </button>
                     <p>
                         Still not a user?{" "}
                         <Link href="/signUp">

@@ -2,8 +2,8 @@ import logo from '../assets/logo.png'
 
 function BodyLandingPage() {
     return (
-        <section class="body-container">
-            <div class="container">
+        <section className="body-container">
+            <div className="container">
                 <div className="text-container">
                    <h2>
                         OurExpenses is coming soon!

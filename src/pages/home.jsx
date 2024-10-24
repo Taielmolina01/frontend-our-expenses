@@ -4,7 +4,7 @@ import Footer from "../components/footer";
 
 function Home() {
     return (
-        <div class ="home-container">
+        <div className ="home-container">
             <NavbarHome />
             <BodyHome />
             <Footer />

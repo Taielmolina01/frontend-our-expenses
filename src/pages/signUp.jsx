@@ -2,13 +2,13 @@ import Footer from "../components/footer";
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import NavbarSign from "../components/navbarSign";
-
-
-const BACK_URL = "";
+import BACK_URL from "../utils"
 
 function SignUp() {
 
     const [error, setError] = useState('');
+    const [isLoading, setIsLoading] = useState(false);
+
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -31,6 +31,7 @@ function SignUp() {
         let res;
 
         try {
+            setIsLoading(true)
             res = await fetch(`${BACK_URL}/users`, {
               method: "POST",
               headers: {
@@ -49,13 +50,15 @@ function SignUp() {
           } catch (e) {
             setError("Error de conexión");
             return;
+          } finally {
+            setIsLoading(false)
           }
     }   
 
     return (
         <>
             <NavbarSign />
-            <div class="form-container">
+            <div className="form-container">
                 <form onSubmit={handleSubmit}>
                     <h2>Sign up</h2>
                     <label>Enter your name</label>
@@ -66,7 +69,7 @@ function SignUp() {
                     />
                     <label>Enter your email</label>
                     <input 
-                        type="eemail"
+                        type="email"
                         name="email"
                         required
                     />
@@ -78,12 +81,14 @@ function SignUp() {
                     />
                     <label>Confirm your password</label>
                     <input 
-                        type="confirmPassword"
+                        type="password"
                         name="confirmPassword"
                         required
                     />
                     {error && <p style={{ color: 'red' }}>{error}</p>}
-                    <input type="submit" value="Sign up"/>
+                    <button  className={isLoading ? 'btn-disabled' : 'btn'}  type="submit" disabled={isLoading}>
+                        {isLoading ? "Loading ..." : "Sign in"}
+                    </button>
                     <p>
                         Already a user?{" "}
                         <Link href="/signIn">

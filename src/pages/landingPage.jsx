@@ -4,7 +4,7 @@ import NavbarLandingPage from "../components/navbarLandingPage";
 
 function LandingPage() {
     return ( 
-        <div class="landing-container">
+        <div className="landing-container">
             <NavbarLandingPage />
             <BodyLandingPage />
             <FooterLandingPage />
